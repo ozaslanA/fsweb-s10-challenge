@@ -4,8 +4,10 @@ import { useSelector } from "react-redux";
 
 const PostList = () => {
   const notlar = useSelector((depo) => depo.notlar);
-  console.log("postList", notlar);
 
+  //const test = useSelector((depo) => depo.notlar);
+
+  console.log("postList", notlar);
   return notlar.length === 0 ? (
     <div className="beyazKutu text-center p-6">Hiç notunuz yok</div>
   ) : (

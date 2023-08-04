@@ -15,7 +15,6 @@ export default function PostForm() {
   } = useForm({ mode: "onChange" });
 
   const dispatch = useDispatch();
-
   const history = useHistory();
 
   function onSubmit(data) {
@@ -29,9 +28,8 @@ export default function PostForm() {
 
     // burada ilgili eylemi dispatch edin
     dispatch(notEkleAPI(yeniNot));
-    // toast mesajı gösterin
-    toast("Not Başarıyla Eklendi!");
 
+    toast("Not Başarıyla Eklendi!");
     // sonra aşağıdaki satırı aktifleştirin
     setTimeout(() => history.push("/notlar"), 2000);
   }
